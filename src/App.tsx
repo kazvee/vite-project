@@ -1,12 +1,24 @@
 import './App.css';
-const logoName = 'rubberduck'
-const module = await import(`./png-images/${logoName}.png`) as { default: string }; // top level await
+// Single Image:
+// const logoName = 'rubberduck'
+// const module = await import(`./png-images/${logoName}.png`) as { default: string }; // top level await
+
+// Multiple Images:
+const modules = import.meta.glob<{ default: string }>('./png-images/*.png', {
+  eager: true,
+});
 
 function App() {
   return (
     <div className='App'>
       <div>
-        <img src={module.default} alt='logo' />
+        {/* Single Image */}
+        {/* <img src={module.default} alt='logo' /> */}
+
+        {/* Multiple Images */}
+        {Object.values(modules).map((src) => (
+          <img src={src.default} alt='logo' />
+        ))}
       </div>
       <h1>Très Vite ⚡</h1>
       <a href='/another-route/'>Another Route</a> 🛣️
