@@ -1,4 +1,5 @@
 import './App.css';
+import './nested.css';
 import moduleOne from './one.module.css';
 // import moduleTwo from './two.module.css';
 
@@ -14,17 +15,26 @@ const modules = import.meta.glob<{ default: string }>('./png-images/*.png', {
 function App() {
   return (
     <div className='App'>
+      <h1 className={moduleOne.highlight}>Très Vite ⚡</h1>
       <div>
         {/* Single Image */}
         {/* <img src={module.default} alt='logo' /> */}
 
         {/* Multiple Images */}
         {Object.values(modules).map((src) => (
-          <img src={src.default} alt='logo' />
+          <img src={src.default} alt='logo' className='logo' />
         ))}
       </div>
-      <h1 className={moduleOne.highlight}>Très Vite ⚡</h1>
-      <a href='/another-route/'>Another Route</a> 🛣️
+      <h2 className='ducks'>Ducks are:</h2>
+      <ul className='styled-list'>
+        <li className='item'>Cute</li>
+        <li className='item'>Yellow</li>
+        <li className='item'>Experts at code debugging</li>
+      </ul>
+      <p className='item'>This is NOT styled ☀️</p>
+      <h3 className='another'>
+        <a href='/another-route/'>Another Route</a> 🛣️
+      </h3>
     </div>
   );
 }

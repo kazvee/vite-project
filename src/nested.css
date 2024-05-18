@@ -1,0 +1,10 @@
+.ducks {
+  color: orangered
+}
+
+.styled-list .item {
+  text-align: left;
+  font-weight: bold;
+  color: darkorange;
+  list-style-type: square;
+}
