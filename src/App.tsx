@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.css';
 import './nested.css';
 import moduleOne from './one.module.css';
@@ -13,8 +14,17 @@ const modules = import.meta.glob<{ default: string }>('./png-images/*.png', {
 });
 
 function App() {
+  useEffect(() => {
+    console.log(import.meta.env.VITE_BANNER_MESSAGE);
+  }, []);
+
   return (
     <div className='App'>
+      {import.meta.env.VITE_BANNER_MESSAGE && (
+        <div className='banner'>
+          {import.meta.env.VITE_BANNER_MESSAGE}
+        </div>
+      )}
       <h1 className={moduleOne.highlight}>Très Vite ⚡</h1>
       <div>
         {/* Single Image */}

@@ -6,6 +6,18 @@
   text-align: center;
 }
 
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: thistle;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
