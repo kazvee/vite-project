@@ -12,7 +12,11 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
+    // The target default of 'modules' is an alias for this array for modern browsers that support native es modules and dynamic imports:
+    //  ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
+    // We can target older browsers like this:
+    target: 'es2015',
+    // target: 'esnext',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
