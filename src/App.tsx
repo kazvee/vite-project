@@ -1,4 +1,7 @@
 import './App.css';
+import moduleOne from './one.module.css';
+// import moduleTwo from './two.module.css';
+
 // Single Image:
 // const logoName = 'rubberduck'
 // const module = await import(`./png-images/${logoName}.png`) as { default: string }; // top level await
@@ -20,7 +23,7 @@ function App() {
           <img src={src.default} alt='logo' />
         ))}
       </div>
-      <h1>Très Vite ⚡</h1>
+      <h1 className={moduleOne.highlight}>Très Vite ⚡</h1>
       <a href='/another-route/'>Another Route</a> 🛣️
     </div>
   );
