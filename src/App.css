@@ -1,4 +1,5 @@
 #root {
+  --brand-yellow: #FEBE10; /* CSS Variable */
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;

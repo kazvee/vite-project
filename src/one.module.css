@@ -1,5 +1,6 @@
 .highlight {
-  color: palevioletred;
+  /* color: palevioletred; */
+  color: var(--brand-yellow); /* CSS Variable */
 }
 
 .lowlight {
