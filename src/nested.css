@@ -1,10 +1,16 @@
 .ducks {
-  color: orangered
+  color: orangered;
 }
 
-.styled-list .item {
-  text-align: left;
-  font-weight: bold;
-  color: darkorange;
-  list-style-type: square;
+.styled-list {
+  .item {
+    text-align: left;
+    font-weight: bold;
+    color: darkorange;
+    list-style-type: square;
+  }
+}
+
+.item {
+  color: magenta;
 }

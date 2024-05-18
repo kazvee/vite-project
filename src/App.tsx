@@ -31,7 +31,7 @@ function App() {
         <li className='item'>Yellow</li>
         <li className='item'>Experts at code debugging</li>
       </ul>
-      <p className='item'>This is NOT styled ☀️</p>
+      <p className='item'>Ducks are pretty cool! 😎</p>
       <h3 className='another'>
         <a href='/another-route/'>Another Route</a> 🛣️
       </h3>
